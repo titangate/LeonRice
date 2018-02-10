@@ -1,0 +1,17 @@
+# i3 optional config
+
+# set i3 gap, see other file for config
+gaps inner <px>
+gaps outer <px>
+
+# set autokey to restart automatically
+focus_follows_mouse no
+
+exec --no-startup-id autokey
+exec --no-startup-id compton --config ~/.config/compton.conf
+bindsym Ctrl+q Kill
+
+
+for_window [class="^.*"] border pixel 0
+
+bindsym $mod+d exec rofi -modi drun -show drun -color-window "#333333,#333333" -color-normal "#333333,#aaaaaa,#333333,#222222,#eee8d5"

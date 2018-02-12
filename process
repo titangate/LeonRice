@@ -102,3 +102,18 @@ https://github.com/pavanjadhaw/betterlockscreen
 
 # set git
 git config --global core.editor "vim"
+
+# slack
+https://slack.com/downloads/instructions/ubuntu
+
+# screen tearing
+https://www.reddit.com/r/Ubuntu/comments/6i3o95/screen_tear_on_ubuntu_1604_with_chrome/?st=jdjkq7zp&sh=ac1f90ce
+
+# use i3block for bar
+
+# screenshot
+sudo apt install scrot
+
+bindsym --release Print exec "scrot -m '~/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Shift+Print exec "scrot -s '~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
+bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"

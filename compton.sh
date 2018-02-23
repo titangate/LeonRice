@@ -7,6 +7,4 @@ killall -q compton
 while pgrep -x compton >/dev/null; do sleep 1; done
 
 # Launch bar
-compton --config $HOME/.config/compton.conf
-
-echo "Bars launched..."
+compton --config $HOME/LeonRice/compton.conf

@@ -7,4 +7,4 @@ killall -q compton
 while pgrep -x compton >/dev/null; do sleep 1; done
 
 # Launch bar
-compton --config $HOME/LeonRice/compton.conf
+compton --config $HOME/LeonRice/compton.conf &

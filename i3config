@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 10
+font pango:System San Francisco Display 10, Font Awesome 5 Brands Regular 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -168,8 +168,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         i3bar_command i3bar -t
-        status_command i3blocks
-        tray_output DP-4
+        status_command i3blocks -c $HOME/LeonRice/i3blocks.conf
+        tray_output DVI-I-1
         colors {
                 background #00000000
                 separator #ffffff00
@@ -235,7 +235,7 @@ bindsym XF86AudioMute exec $volumepath/volume -m -n -t $statuscmd -u $statussig
 # exec_always ~/polybar.sh
 
 # compton
-exec_always --no-startup-id ~/compton.sh
+exec_always --no-startup-id $HOME/LeonRice/compton.sh
 
 # keybind
 exec_always --no-startup-id ./autokey.sh
@@ -263,4 +263,4 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id ckb-next -b &
 
 # dunst
-exec_always --no-startup-id $HOME/LeonRice/dunst.sh
+# exec_always --no-startup-id $HOME/LeonRice/dunst.sh

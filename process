@@ -117,3 +117,11 @@ sudo apt install scrot
 bindsym --release Print exec "scrot -m '~/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 bindsym --release Shift+Print exec "scrot -s '~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
 bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'"
+# disable mouse acceleration
+# https://www.linuxuprising.com/2018/09/how-to-disable-mouse-acceleration-in.html
+# or try this:
+# xset m 0/1 4
+
+# compton with highlight:
+# sudo apt install libconfig-dev libgl-dev asciidoc
+https://github.com/jorchube/compton

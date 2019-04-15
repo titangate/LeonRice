@@ -38,7 +38,7 @@ sudo make install
 # focus_follows_mouse no
 
 # Install autokey
-sudo apt install autokey-gtk
+sudo apt install -y autokey-gtk
 # remap alt and ctrl
 # see .Xmodmap
 
@@ -47,7 +47,7 @@ sudo apt install autokey-gtk
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update 
-sudo apt-get install google-chrome-stable
+sudo apt-get install -y google-chrome-stable
 
 
 # setup fish
@@ -58,6 +58,9 @@ chsh -s /usr/bin/fish
 
 # setup rofi
 # see i3
+# link things
+ln -s ~/LeonRice/i3config ~/.config/i3/config
+ln -s ~/LeonRice/Xmodmap ~/.Xmodmap
 
 # ark theme
 sudo apt install arc-theme
@@ -109,6 +112,15 @@ https://slack.com/downloads/instructions/ubuntu
 https://www.reddit.com/r/Ubuntu/comments/6i3o95/screen_tear_on_ubuntu_1604_with_chrome/?st=jdjkq7zp&sh=ac1f90ce
 
 # use i3block for bar
+git clone https://github.com/vivien/i3blocks
+cd i3blocks
+./autogen.sh
+./configure
+make
+sudo make install
+
+# xrandr
+sudo apt install -y arandr
 
 # screenshot
 sudo apt install scrot
